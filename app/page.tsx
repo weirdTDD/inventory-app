@@ -25,7 +25,7 @@ export default function Home () {
             </Link>
             <Link
               href="#"
-              className="border-2 border-purple-300 bg-purple-200 text-white px-8 py-3 rounded-lg font-semibold shadow-xl hover:bg-purple-700 transition-colors "
+              className="border-2 border-purple-300 bg-purple-200 text-white px-8 py-3 rounded-lg font-semibold shadow-xl hover:bg-purple-600 transition-colors "
             >
               Learn More
             </Link>
