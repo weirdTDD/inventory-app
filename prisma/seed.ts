@@ -1,8 +1,8 @@
-import { PrismaClient } from "@prisma/client/extension";
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main()  {
-    const demoUserId = ""
+    const demoUserId = "3541656d-991a-4de9-afbe-6768bf22500d"
 
     //Create sample products
     await prisma.product.createMany({
@@ -11,8 +11,8 @@ async function main()  {
             name: `Product ${i + 1}`,
             price: (Math.random() * 90 + 10).toFixed(2),
             quantity: Math.floor(Math.random()*20),
-            lowStockAt: 5,
-            createAt: new Date(Date.now() - 1000 * 60 * 60 * 24 *(i * 5)),
+            lowStockAt: 6,
+            createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 *(i * 5)),
         }))
     });
 
