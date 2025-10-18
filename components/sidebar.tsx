@@ -50,7 +50,7 @@ export default function Sidebar({
 
             <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-500 mx-6 ">
                 <div className="flex items-center justify-between font-semibold">
-   {/*                 <UserButton showUserInfo />  */}
+                 <UserButton showUserInfo />  
                 </div>
             </div>
         </div>
