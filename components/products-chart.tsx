@@ -1,7 +1,7 @@
 "use client"
 
 
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 interface ChartData {
     week: string;
     products: number;
@@ -13,7 +13,7 @@ export default function ProductChart({data}: {data: ChartData[]}) {
     console.log(data);
 
     return(
-        <div className="h-48 w-full">
+        <div className="min-h-48 w-full">
             <ResponsiveContainer width = "100%" height = "100%">
                 <AreaChart 
                     data= {data}
@@ -23,7 +23,16 @@ export default function ProductChart({data}: {data: ChartData[]}) {
                     <CartesianGrid strokeDasharray= "3 3" stroke="#ccc"/>
                     <XAxis dataKey="week" stroke='#666' fontSize={12} tickLine={false} axisLine={false} />
                     <YAxis stroke='#666' fontSize={12} tickLine={false} axisLine={false} allowDecimals={false} />
-                    <Area type="monotone" dataKey="products" stroke="#8884d8" fill="#8884d8" />
+                    <Area type="monotone" dataKey="products" stroke="#e51a4c" fill="#ff004f" fillOpacity={0.2} dot={{ fill:"#ff004f", strokeWidth: 2, r: 2}} activeDot={{ fill: "#ff004f", strokeWidth:2, r: 4}} />
+                    <Tooltip 
+                        contentStyle={{
+                            backgroundColor:"#ff9999",
+                            border: "1px solid #e66771",
+                            borderRadius: "8px",
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                        }}
+                        labelStyle={{ color: "#ccc", fontWeight:"500" }}
+                    />
                 </AreaChart>
             </ResponsiveContainer>
         </div>

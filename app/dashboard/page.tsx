@@ -39,9 +39,6 @@ export default  async function DashboardPage ()  {
         select: { price:true, quantity:true, createdAt:true },
     });
 
-   const totalValue = allProducts.reduce(
-         (sum, product) => sum + Number(product.price) * Number(product.quantity), 0 
-    );
     
     const now = new Date();
     const weeklyProductsData = []
@@ -68,10 +65,22 @@ export default  async function DashboardPage ()  {
 
         weeklyProductsData.push({
             week: weekLabel,
-            total: weekTotal,
             products: weekProducts.length,
         });
     }
+
+    const totalValue = allProducts.reduce(
+        (sum, product) => sum + Number(product.price) * Number(product.quantity), 0
+    )
+
+    const inStockCount = allProducts.filter((p) => Number(p.quantity) > 5).length;
+    const lowStockCount = allProducts.filter((p) => Number(p.quantity) <= 5 && Number(p.quantity) >= 1).length;
+    const outOfStockCount = allProducts.filter((p) => Number(p.quantity) === 0 ).length;
+
+    const inStockPercentage = totalProducts > 0 ? Math.round((inStockCount / totalProducts) * 100) : 0;
+    const lowStockPercentage = totalProducts > 0 ? Math.round((lowStockCount / totalProducts) * 100) : 0;
+    const outOfStockPercentage = totalProducts > 0 ? Math.round((outOfStockCount / totalProducts) * 100) : 0;
+
   
 
   return (
@@ -136,7 +145,7 @@ export default  async function DashboardPage ()  {
             
             {/*Inventory Over Time*/}
             <div className="bg-purple-200 rounded-r-xl border-2 border-purple-400 p-6 mb-4">
-                <h2 className='text-xl mb-6'>
+                <h2 className='text-lg font-semibold text-gray-700'>
                     New Products per week
                 </h2>
                 <div className="w-full h-48 min-h-0 min-w-0">
@@ -150,7 +159,7 @@ export default  async function DashboardPage ()  {
         </div>
 
          {/* Stock Overview*/}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 mx-auto">
             <div className="bg-purple-200 rounded-l-xl border-2 border-purple-400 px-6 py-4 ">
                 <div className="flex items-center justify-center mb-6">
                     <h2 className="text-lg font-semibold text-gray-700">
@@ -174,7 +183,7 @@ export default  async function DashboardPage ()  {
                         ];
 
                         return(
-                            <div key={key} className="flex items-center justify-between gap-10 p-3 rounded-lg shadow-xl border-b-1 border-l-1 border-purple-300 bg-purple-200">
+                            <div key={key} className="flex items-center justify-between gap-10 p-3 rounded-lg shadow-xl border-b-1 border-l-1 border-purple-300 backdrop-blur-lg bg-white/10">
                                 <div className="flex items-center space-x-3">
                                     <div className={`w-3 h-3 rounded-full ${bgColor[stockLevel]} mr-2`}/>
                                     <span className='text-sm font-bold text-gray-700'>{product.name}</span>
@@ -186,9 +195,52 @@ export default  async function DashboardPage ()  {
 
                 </div>
             </div>
+
+            {/* Efficiency */}
+            <div className="bg-purple-200 border-2 border-purple-400 rounded-r-xl p-6">
+                <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-lg font-semibold text-gray-700">Efficiency</h2>
+                </div>
+                <div className="flex items-center justify-center">
+                    <div className="relative w-48 h-48">
+                        <div className="absolute inset-0 rounded-xl" ></div>
+                        <div className="absolute inset-0 rounded-full border-12 border-red-800/40 "
+                            style={{
+                                clipPath:
+                                "polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50% )",
+                            }}
+                        />
+                           
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className='text-center'>
+                                <div className="text-2xl font-bold text-gray-900">{inStockPercentage}</div>
+                                <div className="text-sm font-medium text-gray-500">In Stock</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-col mt-8 space-y-3">
+                    <div className="flex items-center space-x-2 font-extrabold text-sm text-gray-600">
+                        <div className="w-3 h-3 rounded-full bg-green-400" />
+                        <span>In Stock ({inStockPercentage}%)</span>
+                    </div>
+
+                    <div className="flex items-center space-x-2 font-extrabold text-sm text-gray-600">
+                        <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                        <span>Low Stock ({lowStockPercentage}%)</span>
+                    </div>
+
+                    <div className="flex items-center space-x-2 font-extrabold text-sm text-gray-600">
+                        <div className="w-3 h-3 rounded-full bg-red-400" />
+                        <span>Out of Stock ({outOfStockPercentage}%)</span>
+                    </div>
+                </div>
+ 
+             </div>
+
         </div>
-        
-        
+
        </main>
         
     </div>
