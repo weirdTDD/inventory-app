@@ -65,6 +65,7 @@ export default  async function DashboardPage ()  {
 
         weeklyProductsData.push({
             week: weekLabel,
+            total:weekTotal,
             products: weekProducts.length,
         });
     }
@@ -144,7 +145,7 @@ export default  async function DashboardPage ()  {
 
             
             {/*Inventory Over Time*/}
-            <div className="bg-purple-200 rounded-r-xl border-2 border-purple-400 p-6 mb-4">
+            <div className="bg-purple-200 rounded-r-xl border-2 border-purple-400 p-6 mb-4 ">
                 <h2 className='text-lg font-semibold text-gray-700'>
                     New Products per week
                 </h2>
