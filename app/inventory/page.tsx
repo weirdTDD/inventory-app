@@ -1,13 +1,46 @@
+
+import Pagination from "../../components/pagination";
 import Sidebar from "../../components/sidebar";
 import { getCurrentUser } from "../../lib/auth";
 import { prisma } from "../../lib/prisma";
 import { deleteProduct } from "../../lib/products";
 
-export default async function InventoryPage() {
+export default async function InventoryPage({
+    searchParams,
+}: {searchParams: Promise<{ q?: string; page?: string }>;
+
+}) {
+
+    const params = await searchParams;
+    const q = (params.q ?? "").trim();
 
     const user = await getCurrentUser();
     const userId = user.id;
-    const totalProducts = await prisma.product.findMany({ where: { userId } });
+
+    const pageSize = 5;
+    const page = Math.max(1, Number(params.page ?? 1));
+
+
+     const where = {
+        userId,
+        ...( q ? {name: { contains: q, mode: "insensitive" as const }} : {}),
+    }
+   
+
+    const [totalCount, items] = await Promise.all([
+        prisma.product.count({ where }), 
+        prisma.product.findMany({
+            where,
+            orderBy:{ createdAt: "desc" },
+            skip: (page-1) * pageSize,
+            take: pageSize,
+    }),
+    ]);
+
+
+
+    const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
+ 
     
 
     return (
@@ -30,10 +63,10 @@ export default async function InventoryPage() {
 
 
                 {/* Search Bar */}
-                <div className="bg-white rounded-lg border border-purple-400">
-                    <form action="/inventory" className="flex gap-6" method="GET">
-                        <input type="text" name="q" placeholder="Search products..." className="flex-1 border border-gray-300 rounded-md p-2 focus:outline-none " />
-                        <button type="submit" className="bg-purple-500 text-white rounded-md px-6 py-2">Search</button>
+                <div className="bg-white rounded-lg gap-4 border border-purple-400">
+                    <form action="/inventory" className="flex  gap-6" method="GET">
+                        <input type="text" name="q" placeholder="Search products..." className="flex-10  border border-gray-300 rounded-lg p-2 focus:outline-none " />
+                        <button type="submit" className="flex-1 bg-purple-500 text-white rounded-lg px-8 py-2 hover:bg-purple-800">Search</button>
                     </form>
                 </div>
 
@@ -53,7 +86,7 @@ export default async function InventoryPage() {
                             </tr>
                         </thead>
                         <tbody className="bg-white/50 divide-y divide-gray-200">
-                            {totalProducts.map((product, key) => (
+                            {items.map((product, key) => (
                                 <tr key={key}>
                                     <td className="px-6 py-4 text-sm text-gray-600">{product.name}</td>
                                     <td className="px-6 py-4 text-sm text-gray-600">{product.sku || "-"}</td>
@@ -78,6 +111,20 @@ export default async function InventoryPage() {
                     </table>
 
                 </div>
+
+                {totalPages > 1 && (
+                    <div className="bg-white rounded-lg border border-gray-300 p-6">
+                        <Pagination
+                            currentPage ={page}
+                            totalPages ={totalPages}
+                            baseUrl = "/inventory" 
+                            searchParams = {{
+                                q,
+                                pageSize: String(pageSize),
+                            }}
+                        />
+                    </div>
+                )}
             </div>
             </main>
         </div>
