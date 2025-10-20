@@ -63,10 +63,10 @@ export default async function InventoryPage({
 
 
                 {/* Search Bar */}
-                <div className="bg-white rounded-lg gap-4 border border-purple-400">
+                <div className="bg-white rounded-lg gap-4">
                     <form action="/inventory" className="flex  gap-6" method="GET">
-                        <input type="text" name="q" placeholder="Search products..." className="flex-10  border border-gray-300 rounded-lg p-2 focus:outline-none " />
-                        <button type="submit" className="flex-1 bg-purple-500 text-white rounded-lg px-8 py-2 hover:bg-purple-800">Search</button>
+                        <input type="text" name="q" placeholder="Search products..." className="w-5/6  border border-purple-300 rounded-lg p-2 focus:outline-none " />
+                        <button type="submit" className="w-1/6 bg-purple-500 text-white rounded-lg px-8 py-2 hover:shadow-2xl hover:bg-purple-700">Search</button>
                     </form>
                 </div>
 
