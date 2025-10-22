@@ -40,6 +40,22 @@ A simple web application to help you keep track of your products and stock level
 
 5. **Open your browser** to [http://localhost:3000](http://localhost:3000) and create an account!
 
+### 🚀 Deploy to Vercel (Optional)
+
+To share your app online:
+
+1. Push your code to GitHub
+2. Connect your GitHub repo to [Vercel](https://vercel.com)
+3. **Important:** In your Vercel project settings, add these environment variables:
+   ```
+   DATABASE_URL=your_database_connection_string
+   NEXT_PUBLIC_STACK_PROJECT_ID=your_stack_project_id
+   NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY=your_stack_client_key
+   STACK_SECRET_SERVER_KEY=your_stack_server_key
+   NEXT_PUBLIC_STACK_URL=https://your-app-name.vercel.app
+   ```
+4. Deploy and your app will be live!
+
 ## 📱 How to Use the App
 
 ### Adding Products
