@@ -85,7 +85,7 @@ export default  async function DashboardPage ()  {
   return (
     <div className='min-h-screen bg-gray-100'>
         
-       <Sidebar currentPath='/dashboard' />
+       <Sidebar currentPath='/dashboard'  />
        <main className="ml-72 p-8" >
         {/* Header */}
         <div className="mb-8">

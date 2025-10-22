@@ -13,7 +13,7 @@ export default function ProductChart({data}: {data: ChartData[]}) {
     console.log(data);
 
     return(
-        <div className="min-h-48 w-full">
+        <div className="h-[210px] w-full">
             <ResponsiveContainer width = "100%" height = "100%">
                 <AreaChart 
                     data= {data}
