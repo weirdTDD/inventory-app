@@ -29,10 +29,6 @@ export default function settingsPage () {
                     </div>
                 </div>
             </main>
-
-            
-
-        
          
         </div> 
        

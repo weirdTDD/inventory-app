@@ -30,9 +30,7 @@ export default  async function DashboardPage ()  {
         where: { userId },
         orderBy: { createdAt: "desc" },
         take:6,
-    }); 
-    
-    console.log(recent);
+    });
 
     const allProducts = await prisma.product.findMany({
         where: { userId },

@@ -37,14 +37,19 @@ export async function createProduct(data: FormData) {
     });  
 
     if (!parsed.success) {
-        throw new Error("Validation failed");  
-    }
-    try {
-        await prisma.product.create({
-            data: {...parsed.data, userId:user.id},
-        });
-        redirect("/inventory");
-    } catch (error) {
-        throw new Error("Failed to create product")
-    }
+    console.error(parsed.error.flatten());
+    return { success: false, error: "Validation failed" };
+  }
+
+  try {
+    await prisma.product.create({
+      data: { ...parsed.data, userId: user.id },
+    });
+
+    return {success: true};
+  } catch (error) {
+    console.error("DB error:", error);
+    return { success: false, error: "Failed to create product" };
+  }
+
 }

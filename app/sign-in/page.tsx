@@ -7,7 +7,17 @@ export default function SignInPage() {
     <div className='min-h-screen flex items-center justify-center  bg-gradient-to-br from-purple-50 to-purple-200'>
       <div className='max-w-md w-full space-y-8'> 
         <SignIn />
-        <Link href="/">Back to Home</Link>
+
+        <div className='flex items-center justify-between'>
+          <Link
+            href="/" 
+            className="border-2 border-purple-300 bg-purple-200 text-gray-600 hover:text-white px-8 py-3 rounded-lg font-semibold shadow-xl hover:bg-purple-500 transition-colors "
+            >
+              Back to Home</Link>
+          <Link href="/add-products" className= " bg-purple-600 text-white px-12 py-3 rounded-lg font-semibold hover:bg-purple-800 shadow-xl transition-colors ">Add Products</Link>
+          
+        </div>
+
       </div>
     </div>
 
