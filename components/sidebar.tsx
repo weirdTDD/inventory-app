@@ -31,10 +31,18 @@ export default function Sidebar({ currentPath = "/dashboard" }: { currentPath: s
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 bg-purple-700 text-white w-72 min-h-screen p-6 z-20 transform transition-transform duration-300
-        ${isOpen ? "translate-x-0" : "-translate-x-full"} 
-        md:translate-x-0`}
+        className={`fixed top-0 left-0 bg-purple-700 text-white h-screen p-6 z-20 transform transition-transform duration-300
+        md:w-72 w-full md:translate-x-0
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
+        {/* Close button for mobile */}
+        <button
+          onClick={() => setIsOpen(false)}
+          className="md:hidden absolute top-4 right-4 text-white hover:text-gray-300 z-30 focus:outline-none"
+          aria-label="Close sidebar"
+        >
+          <X className="w-6 h-6" />
+        </button>
         <div className="border-b border-gray-400 mb-12 py-6 text-center">
           <div className="flex items-center gap-3">
             <BarChart3 className="w-9 h-9" />
