@@ -3,6 +3,7 @@
 import { prisma } from "../lib/prisma";
 import { getCurrentUser } from "./auth";
 import { z } from "zod";
+import { redirect } from "next/navigation";
 
 
 const ProductSchema = z.object({
@@ -13,14 +14,22 @@ const ProductSchema = z.object({
     lowStockAt: z.coerce.number().int().min(0).optional(),
 })
 
-export async function deleteProduct(data: FormData) {   
+export async function deleteProduct(data: FormData) {
 
     const user = await getCurrentUser();
 
     const id = String(data.get("id") || "");
     if (!id) return;
 
-    await prisma.product.deleteMany({ where:  { id: id, userId: user.id }  });
+    try {
+        await prisma.product.delete({
+            where: { id: id, userId: user.id }
+        });
+        redirect("/inventory");
+    } catch (error) {
+        console.error("Delete error:", error);
+        // Optionally, redirect with error or handle differently
+    }
 }
 
 
