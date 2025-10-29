@@ -29,9 +29,9 @@ export default function AddProductForm() {
   return (
     <div className="min-h-screen bg-gray-200">
       <Sidebar currentPath="/add-products" />
-      <main className="ml-74 p-8">
+      <main className="lg:ml-74 lg:p-8 p-4">
         <div className="flex items-center justify-between">
-            <div className="mb-8 max-w-5xl">
+            <div className="lg:mb-8 max-w-5xl">
                 <h1 className="text-2xl font-bold text-gray-700 mb-4">
                 Add Products
                 </h1>
@@ -119,7 +119,7 @@ export default function AddProductForm() {
                         <button
                             type="submit"
                             disabled={isPending}
-                            className={` px-6 py-3 rounded-lg font-medium transition ${
+                            className={` px-6 py-2 rounded-lg text-sm font-medium transition ${
                             isPending
                                 ? "bg-purple-400 cursor-not-allowed"
                                 : "bg-purple-500 hover:bg-purple-600 text-white"
@@ -130,7 +130,7 @@ export default function AddProductForm() {
 
                         <Link
                             href="/inventory"
-                            className="border-2 border-gray-400 bg-gray-300 hover:bg-gray-400 text-gray-900 px-10 py-3 rounded-lg"
+                            className="border-2 border-gray-400 bg-gray-300 hover:bg-gray-400 text-gray-900 px-10 py-2 rounded-lg"
                         >
                             Cancel
                         </Link>

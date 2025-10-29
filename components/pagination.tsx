@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 interface PaginationProps {
@@ -56,7 +56,7 @@ export default function Pagination({
             <Link 
             href = {getPageUrl(currentPage - 1)}
             className={`flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-lg ${currentPage<= 1 ? "text-gray-400 cursor-not-allowed bg-gray-300"
-                 : "text-gray-200 hover:bg-purple-600 bg-purple-400 border-2 border-purple-500"}`}
+              : "text-gray-200 hover:bg-purple-600 bg-purple-400 border-2 border-purple-500"}`}
             aria-disabled = {currentPage <= 1}
             >
                 <ChevronLeft /> Prev

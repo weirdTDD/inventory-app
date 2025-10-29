@@ -10,9 +10,9 @@ export default function settingsPage () {
     
         <div className="min-h-screen bg-gray-100">
             <Sidebar currentPath="/settings" />
-            <main className="ml-72 p-8">
+            <main className="lg:ml-72 lg:p-8 p-4">
                 <div className="flex items-center justify-between">
-                    <div className="mb-8">
+                    <div className="lg:mb-8">
                         <div>
                             <h1 className="text-2xl font-bold text-gray-700 mb-4">Account Settings</h1>
                             <p className="text-sm font-semibold text-gray-500">
