@@ -198,7 +198,7 @@ export default async function DashboardPage() {
                         <div className="flex items-center justify-between mb-4 lg:mb-6">
                             <h2 className="text-base lg:text-lg font-semibold text-gray-700">Efficiency</h2>
                         </div>
-                        <div className="flex flex-col lg:flex-row items-center justify-between">
+                        <div className="flex flex-col items-center justify-between">
                             <div className="relative w-32 h-32 lg:w-48 lg:h-48 mb-4 lg:mb-0">
                                 <div className="absolute inset-0 rounded-xl"></div>
                                 <div className="absolute inset-0 rounded-full border-8 lg:border-12 border-red-800/40"

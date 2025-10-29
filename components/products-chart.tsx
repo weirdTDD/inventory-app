@@ -13,8 +13,8 @@ export default function ProductChart({data}: {data: ChartData[]}) {
     console.log(data);
 
     return(
-        <div className="lg:h-[200px] h-[170px]  w-full">
-            <ResponsiveContainer width = "100%" height = "100%">
+        <div className="lg:h-[200px] h-[170px]  w-full min-w-0 min-h-[170px]">
+            <ResponsiveContainer width = "100%" height = {180}>
                 <AreaChart 
                     data= {data}
                     margin={{top: 5, right: 30, left: 20, bottom: 5}}
@@ -22,7 +22,7 @@ export default function ProductChart({data}: {data: ChartData[]}) {
                 >
                     <CartesianGrid strokeDasharray= "3 3" stroke="#ccc"/>
                     <XAxis dataKey="week" stroke='#666' fontSize={12} tickLine={false} axisLine={false} />
-                    <YAxis stroke='#666' fontSize={12} tickLine={false} axisLine={false} allowDecimals={false} />
+                    <YAxis stroke='#666' fontSize={12} tickLine={false} axisLine={false} allowDecimals={false} className='ml-[-40px]' />
                     <Area type="monotone" dataKey="products" stroke="#e51a4c" fill="#ff004f" fillOpacity={0.2} dot={{ fill:"#ff004f", strokeWidth: 2, r: 2}} activeDot={{ fill: "#ff004f", strokeWidth:2, r: 4}} />
                     <Tooltip 
                         contentStyle={{
