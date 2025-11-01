@@ -5,7 +5,7 @@ export default function LearnMore () {
     <div className='min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center'>
       <div className='container mx-auto px-4 py-16'>
         <div className='text-center'>
-          <h1 className='text-3xl lg:text-5xl font-extrabold font-sans text-shadow-lg text-gray-900 mb-8'>
+          <h1 className='text-3xl lg:text-5xl font-extrabold font-sans text-shadow-lg text-purple-400 mb-8'>
            <span className="text-purple-700">Learn More</span> <span className='text-purple-500'>about</span> Ed&apos;s Inventory Management
           </h1>
           <h3 className="text-lg lg:text-2xl mb-4  font-bold text-purple-600 text-shadow-lg font-sans">The Future of Inventory Management</h3>
