@@ -25,7 +25,7 @@ export default function Home () {
               Sign In
             </Link>
             <Link
-              href="#"
+              href="/learn-more"
               className="border-2 border-purple-300 bg-purple-200 text-gray-600 hover:text-white px-4 py-2 rounded-lg font-semibold shadow-xl hover:bg-purple-500 transition-colors "
             >
               Learn More
