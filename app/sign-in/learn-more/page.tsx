@@ -1,21 +1,48 @@
 import React from 'react'
+import Image from "next/image"
 
 export default function LearnMore () {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center'>
-      <div className='container mx-auto px-4 py-16'>
-        <div className='text-center'>
-          <h1 className='text-3xl lg:text-5xl font-extrabold font-sans text-shadow-lg text-purple-400 mb-8'>
-           <span className="text-purple-700">Learn More</span> <span className='text-purple-500'>about</span> Ed&apos;s Inventory Management
+    <div>
+
+      <div className="relative bg-gray-900">
+        <div className="absolute inset-0">
+          <Image
+            className="w-full h-full object-cover opacity-30"
+            src="/img-1.png"
+            alt="Team working"
+            width={100} height={100}
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Learn More About Us
           </h1>
-          <h3 className="text-lg lg:text-2xl mb-4  font-bold text-purple-600 text-shadow-lg font-sans">The Future of Inventory Management</h3>
-          <p className='text-sm text-gray-700 font-semibold text-shadow-sm mb-10 max-w-2xl mx-auto px-8 lg:px-0 '>
-            Imagine a world where inventory management is seamless and efficient with clear visualizations and real-time data. Our system is designed to provide you with the insights you need to make informed decisions and optimize your inventory processes. <br /> <br/> <span className=" font-semibold text-gray-500 text-shadow-none mt-3">Get started by navigating to the inventory dashboard
-             or  adding new items to your inventory.</span>
+          <p className="mt-6 max-w-3xl text-xl text-gray-300">
+            Our story, values, and the people behind our success.
           </p>
         </div>
-     </div>
-    </div>
+      </div>
 
+      <div className='relative max-w-7xl mx-auto py-12 px-6 sm:px-6 lg:px-8'>
+        <div className='lg:grid lg:grid-col-2 lg:gap-8'>
+          <div>
+            <h2>Our Mission</h2>
+            <p>To deliver cutting edge solutions and better inventory management for  our clients.</p>
+          </div>
+          {/*for side by side image*/}
+          <div>
+
+          </div>
+        </div>
+
+        <div className='mt-12'>
+
+        </div>
+      </div>
+
+    </div>
   )
+
+     
 }
