@@ -18,7 +18,7 @@ export default function LearnMore () {
           />   THIS IS FOR AN IMAGE BACKGROUND SETUP FOR THE HEADER ONCE I FIND ONE*/}
           
         </div>
-          <div className="absolute xs:hidden">
+          <div className="absolute hidden sm:block">
             <Image
               src="/logox.png"
               alt="logo"
@@ -40,11 +40,12 @@ export default function LearnMore () {
       </div>
 
       <div className='relative max-w-7xl mx-auto py-12 px-6 sm:px-6 lg:px-8'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16'>
-          <div>
-            <h2 className='mt-10 text-4xl font-semibold text-gray-800'>Our Mission</h2>
-            <p className='mt-4 text-base text-gray-500'>To deliver cutting edge solutions and better inventory management for  our clients. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam corporis similique ratione quae voluptate aliquid odit, asperiores deleniti, ducimus architecto molestias illum unde nihil, ipsum ad. Laudantium, ratione voluptatum!</p>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16'>
+          <div className='mb-15'>
+            <h2 className='mt-15 text-4xl font-semibold text-gray-800'>Our Mission</h2>
+            <p className='mt-4 text-medium text-lg text-gray-500'>To deliver cutting edge solutions and better inventory management for  our clients. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam corporis similique ratione quae voluptate aliquid odit, asperiores deleniti, ducimus architecto molestias illum unde nihil, ipsum ad. Laudantium, ratione voluptatum!</p>
           </div>
+
           {/*for side by side image*/}
           <div className='py-6'>
             <Image 
@@ -58,28 +59,32 @@ export default function LearnMore () {
           </div>
         </div>
 
+        {/* Key Challenges Section */}
+
         <div className='mt-24 mb-24'>
           <h2 className='mt-4 text-4xl font-semibold text-gray-800 text-center'>Key Challenges</h2>
-          <p className='mt-4 text-lg text-gray-600 font-semibold text-center'>Managing inventory effectively can be a complex task, especially as businesses grow. Common challenges include tracking stock levels, forecasting demand, and ensuring timely reordering. Our platform is designed to address these issues head-on, providing users with the tools they need to streamline their inventory processes and make informed decisions.</p>
+          <p className='mt-4 text-lg text-gray-600 font-medium text-center mx-6'>Managing inventory effectively can be a complex task, especially as businesses grow. Common challenges include tracking stock levels, forecasting demand, and ensuring timely reordering. Our platform is designed to address these issues head-on, providing users with the tools they need to streamline their inventory processes and make informed decisions.</p>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  justifyitems-center'>
             <div className=' min-w-xs'>
-              <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-500 p-3'>Slow Inovation</h3>
+              <h3 className='mt-6 font-semibold text-gray-800 border-b-3 border-gray-400 p-3'>Slow Inovation</h3>
               <p className='text-base text-gray-500 mt-4'>The time spent learning new tools, ramping up developers, and coordinating multi-team deployments creates barriers to rapid innovation.</p>
             </div>
 
             <div className=' min-w-xs'>
-              <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-500 p-3 flex'>Lack of enterprise-grade features</h3>
+              <h3 className='mt-6 font-semibold text-gray-800 border-b-3 border-gray-400 p-3 flex'>Lack of enterprise-grade features</h3>
               <p className='text-base text-gray-500 m-4'>This deficit translates into issues with navigating module availability, training IT to support open source software, and testing compatibility.</p>
             </div>
 
             <div className=' min-w-xs'>
-              <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-500 p-3'>24/7 availability support</h3>
+              <h3 className='mt-6 font-semibold text-gray-800 border-b-3 border-gray-400 p-3'>24/7 availability support</h3>
               <p className='text-base text-gray-500 mt-4'>Our platform provides round-the-clock support to ensure smooth operations and fast record tracking and retrieval.</p>
             </div>
 
           </div>
         </div>
+
+        {/*Key Benefits Section*/}
 
         <div className='mt-20 mb-16'>
           <h2 className='mt-4 text-4xl font-semibold text-gray-800 text-center' >Key Benefits</h2>
@@ -131,7 +136,38 @@ export default function LearnMore () {
 
           </div>
         </div>
-      </div>
+
+
+            {/* Key Features Section */}
+        <div>
+
+        </div>
+
+        {/*Service and support Section*/}
+        <div className='mt-36 grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
+            <div className='py-6'>
+              <Image 
+                className=' w-full h-full rounded-xl shadow-lg '
+                src="https://images.unsplash.com/photo-1700727448575-6f1680cd7d75?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1331g"
+                alt="pic"
+                width={1400} height={750}
+                style={{ objectFit: "cover" }}
+                loading='lazy'
+              />
+            </div>
+
+            <div>
+              <div className='mb-15'>
+                <h2 className='mt-15 text-4xl font-semibold text-gray-800'>Our Mission</h2>
+                <p className='mt-4 text-medium text-lg text-gray-500'>To deliver cutting edge solutions and better inventory management for  our clients. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam corporis similique ratione quae voluptate aliquid odit, asperiores deleniti, ducimus architecto molestias illum unde nihil, ipsum ad. Laudantium, ratione voluptatum!</p>
+              </div>
+            </div>
+
+        </div>
+
+
+
+      </div>{/*windowed*/}
 
     </div>
   )
