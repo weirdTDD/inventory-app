@@ -65,19 +65,19 @@ export default function LearnMore () {
           <h2 className='mt-4 text-4xl font-semibold text-gray-800 text-center'>Key Challenges</h2>
           <p className='mt-4 text-lg text-gray-600 font-medium text-center mx-6'>Managing inventory effectively can be a complex task, especially as businesses grow. Common challenges include tracking stock levels, forecasting demand, and ensuring timely reordering. Our platform is designed to address these issues head-on, providing users with the tools they need to streamline their inventory processes and make informed decisions.</p>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  justifyitems-center'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 '>
             <div className=' min-w-xs'>
-              <h3 className='mt-6 font-semibold text-gray-800 border-b-3 border-gray-400 p-3'>Slow Inovation</h3>
+              <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-400 p-3'>Slow Inovation</h3>
               <p className='text-base text-gray-500 mt-4'>The time spent learning new tools, ramping up developers, and coordinating multi-team deployments creates barriers to rapid innovation.</p>
             </div>
 
             <div className=' min-w-xs'>
-              <h3 className='mt-6 font-semibold text-gray-800 border-b-3 border-gray-400 p-3 flex'>Lack of enterprise-grade features</h3>
+              <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-400 p-3 flex'>Lack of enterprise-grade features</h3>
               <p className='text-base text-gray-500 m-4'>This deficit translates into issues with navigating module availability, training IT to support open source software, and testing compatibility.</p>
             </div>
 
             <div className=' min-w-xs'>
-              <h3 className='mt-6 font-semibold text-gray-800 border-b-3 border-gray-400 p-3'>24/7 availability support</h3>
+              <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-400 p-3'>24/7 availability support</h3>
               <p className='text-base text-gray-500 mt-4'>Our platform provides round-the-clock support to ensure smooth operations and fast record tracking and retrieval.</p>
             </div>
 
@@ -110,7 +110,7 @@ export default function LearnMore () {
                 <Image 
                   src="https://www.enterprisedb.com/sites/default/files/beacon_whitepapers.svg"
                   alt="Image description"
-                  className='mx-auto'
+                  className='h-22 w-22 mx-auto'
                   width={75} height={75}
                   loading='lazy'
 
@@ -123,7 +123,7 @@ export default function LearnMore () {
                 <Image 
                   src="https://www.enterprisedb.com/sites/default/files/beacon_blog.svg"
                   alt="Image description"
-                  className='mx-auto'
+                  className='h-22 w-22 mx-auto'
                   width={100} height={100}
                   loading='lazy'
 
@@ -139,7 +139,47 @@ export default function LearnMore () {
 
 
             {/* Key Features Section */}
-        <div>
+        <div className='mb-36 mt-36 '>
+          <h2 className='text-4xl font-semibold text-gray-800 text-center'>Key Features</h2>
+
+          <div className='mt-16 mx-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start'>
+
+              <div className='min-w-3xs'>
+                <h2 className='border-b-2 border-gray-400 font-semibold text-lg mt-6 mr-6 p-3'>Just the headers the </h2> 
+                <p className='font-medium text-xs text-gray-600 mt-4 mr-6  '>
+                  Hey im writing something in multiple lines to test a theory 
+
+                </p>
+              </div>
+
+              <div className='min-w-3xs'>
+                <h2 className='border-b-2 border-gray-400 font-semibold text-lg mt-6  mr-6  p-3'>Just the headers the </h2> 
+                <p className='font-medium text-xs text-gray-600 mt-4  mr-6 '>
+                  Hey im writing something in multiple lines to test a theory 
+
+                </p>
+              </div>
+
+              <div className='min-w-3xs'>
+                <h2 className='border-b-2 border-gray-400 font-semibold text-lg mt-6  mr-6  p-3'>Just the headers the </h2> 
+                <p className='font-medium text-xs text-gray-600 mt-4  mr-6  '>
+                  Hey im writing something in multiple lines to test a theory 
+
+                </p>
+              </div>
+
+              <div className='min-w-3xs'>
+                <h2 className='border-b-2 border-gray-400 font-semibold text-lg mt-6  mr-6  p-3'>Just the headers the </h2> 
+                <p className='font-medium text-xs text-gray-600 mt-4  mr-6 '>
+                  Hey im writing something in multiple lines to test a theory 
+
+                </p>
+              </div>
+
+
+            </div>
+          </div>
 
         </div>
 
@@ -148,7 +188,7 @@ export default function LearnMore () {
             <div className='py-6'>
               <Image 
                 className=' w-full h-full rounded-xl shadow-lg '
-                src="https://images.unsplash.com/photo-1700727448575-6f1680cd7d75?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1331g"
+                src="/img-02.png"
                 alt="pic"
                 width={1400} height={750}
                 style={{ objectFit: "cover" }}
@@ -158,7 +198,7 @@ export default function LearnMore () {
 
             <div>
               <div className='mb-15'>
-                <h2 className='mt-15 text-4xl font-semibold text-gray-800'>Our Mission</h2>
+                <h2 className='mt-15 text-4xl font-semibold text-gray-800'>Services and Support</h2>
                 <p className='mt-4 text-medium text-lg text-gray-500'>To deliver cutting edge solutions and better inventory management for  our clients. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam corporis similique ratione quae voluptate aliquid odit, asperiores deleniti, ducimus architecto molestias illum unde nihil, ipsum ad. Laudantium, ratione voluptatum!</p>
               </div>
             </div>
