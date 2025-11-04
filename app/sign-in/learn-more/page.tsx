@@ -5,18 +5,10 @@ export default function LearnMore () {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-200 to-purple-50">
 
-      <div className="relative bg-gray-300">
+      <div className="relative bg-gray-300 xs:hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full object-cover opacity-30 bg-gradient-to-l from-purple-600 via-indigo-300 to-purple-800">
-            <div className="relative">
-              <Image
-                src="/logox.png"
-                alt=""
-                className='w-72 h-26 relative mx-8 z-20'
-                width={250}
-                height={45}
-              />
-            </div>
+
           </div>
           {/*  <Image
             className="w-full h-full object-cover opacity-30"
@@ -26,9 +18,19 @@ export default function LearnMore () {
           />   THIS IS FOR AN IMAGE BACKGROUND SETUP FOR THE HEADER ONCE I FIND ONE*/}
           
         </div>
+          <div className="absolute xs:hidden">
+            <Image
+              src="/logox.png"
+              alt="logo"
+              className='w-72 h-26 m-8'
+              width={250}
+              height={45}
+              loading='lazy'
+            />
+          </div>
         
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-12 lg:px-8">
-          <h1 className="text-4xl font-extrabold tracking-tight text-transparent sm:text-5xl lg:text-6xl bg-gradient-to-r from-fuchsia-500 via-fuchsia-800 to-indigo-700 bg-clip-text">
+          <h1 className="text-4xl font-extrabold tracking-tight text-transparent sm:text-5xl lg:text-6xl bg-gradient-to-r from-fuchsia-500 via-fuchsia-800 to-indigo-700 bg-clip-text mt-12">
             Learn More About Us
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-transparent bg-gradient-to-r from-purple-900 via-fuchsia-800 to-purple-200 bg-clip-text">
@@ -60,18 +62,18 @@ export default function LearnMore () {
           <h2 className='mt-4 text-4xl font-semibold text-gray-800 text-center'>Key Challenges</h2>
           <p className='mt-4 text-lg text-gray-600 font-semibold text-center'>Managing inventory effectively can be a complex task, especially as businesses grow. Common challenges include tracking stock levels, forecasting demand, and ensuring timely reordering. Our platform is designed to address these issues head-on, providing users with the tools they need to streamline their inventory processes and make informed decisions.</p>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 items-center'>
-            <div className=''>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  justifyitems-center'>
+            <div className=' min-w-xs'>
               <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-500 p-3'>Slow Inovation</h3>
               <p className='text-base text-gray-500 mt-4'>The time spent learning new tools, ramping up developers, and coordinating multi-team deployments creates barriers to rapid innovation.</p>
             </div>
 
-            <div>
-              <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-500 p-3'>Lack of enterprise-grade features</h3>
+            <div className=' min-w-xs'>
+              <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-500 p-3 flex'>Lack of enterprise-grade features</h3>
               <p className='text-base text-gray-500 m-4'>This deficit translates into issues with navigating module availability, training IT to support open source software, and testing compatibility.</p>
             </div>
 
-            <div className=''>
+            <div className=' min-w-xs'>
               <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-500 p-3'>24/7 availability support</h3>
               <p className='text-base text-gray-500 mt-4'>Our platform provides round-the-clock support to ensure smooth operations and fast record tracking and retrieval.</p>
             </div>
@@ -91,7 +93,7 @@ export default function LearnMore () {
                 <Image 
                   src="https://www.enterprisedb.com/sites/default/files/images/beacon/beacon_icon_performance_diagnostics.svg"
                   alt="Image description"
-                  className='w-25 h-25 mx-auto'
+                  className='w-22 h-22 mx-auto'
                   width={100} height={100}
                   loading='lazy'
                 />
@@ -104,7 +106,7 @@ export default function LearnMore () {
                   src="https://www.enterprisedb.com/sites/default/files/beacon_whitepapers.svg"
                   alt="Image description"
                   className='mx-auto'
-                  width={70} height={70}
+                  width={75} height={75}
                   loading='lazy'
 
                 />
