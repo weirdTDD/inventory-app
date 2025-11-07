@@ -30,7 +30,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <StackProvider app={stackClientApp}>
-            <StackTheme>
+            <StackTheme theme={{
+              light: { secondaryForeground: 'white' },
+              dark: { secondaryForeground: 'white' }
+            }}>
               {children}
             </StackTheme>
         </StackProvider>

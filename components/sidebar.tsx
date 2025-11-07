@@ -80,7 +80,7 @@ export default function Sidebar({ currentPath = "/dashboard" }: { currentPath: s
         </nav>
 
         {/* User Section */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-purple-500">
+        <div className="absolute bottom-0 left-0 right-0 p-6 border-t text-white border-purple-500">
           <UserButton showUserInfo />
         </div>
       </aside>
