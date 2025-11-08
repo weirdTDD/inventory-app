@@ -1,4 +1,4 @@
-import { ArrowUpNarrowWide, BarChart3, TrendingUp } from "lucide-react";
+import { ArrowUpNarrowWide, BarChart3, ChartLine, MonitorSmartphone, ShieldOff, TrendingUp } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -15,6 +15,36 @@ const header: HeaderProps[] = [
   {id:3, title:"10x", subtitle:"Real-time Analytics", icon:BarChart3},
 
 ];
+
+interface FeaturesProps {
+  id: number;
+  title:string;
+  description:string;
+  icon: React.ComponentType<{ className?: string }>
+}
+
+const features: FeaturesProps[] = [
+  {id:1,
+    title:"Real-time Tracking",
+    description:"Monitor your inventory levels in real-time with instant updates on stock movements, ensuring you always have accurate data at your fingertips.",
+    icon:ChartLine
+  },
+  {id:2,
+    title:"Business Intelligent Dashboard",
+    description:"Gain insights into your business performance with our comprehensive dashboard, featuring key metrics and analytics.",
+    icon:ChartLine
+  },
+  {id:3,
+    title:"Easy Accessibility",
+    description:"Monitor and add data from any device, anywhere, and at any time with our cloud based inventory management system.",
+    icon:MonitorSmartphone
+  },
+  {id:4,
+    title:"Data Privacy Policies",
+    description:"With our secure database management systems, your data is safe with us. We prioritize data over everthing else",
+    icon:ShieldOff
+  },
+]
 
 
 export default function Home () {
