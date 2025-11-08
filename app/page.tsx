@@ -1,4 +1,4 @@
-import { ArrowUpNarrowWide, BarChart3, ChartLine, MonitorSmartphone, ShieldOff, TrendingUp } from "lucide-react";
+import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MonitorSmartphone, ShieldOff, TrendingUp } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -32,17 +32,48 @@ const features: FeaturesProps[] = [
   {id:2,
     title:"Business Intelligent Dashboard",
     description:"Gain insights into your business performance with our comprehensive dashboard, featuring key metrics and analytics.",
-    icon:ChartLine
+    icon:ChartCandlestick
   },
   {id:3,
     title:"Easy Accessibility",
-    description:"Monitor and add data from any device, anywhere, and at any time with our cloud based inventory management system.",
+    description:"Users can monitor, access and add data from any device, anywhere, and at any time with our cloud based inventory management system.",
     icon:MonitorSmartphone
   },
   {id:4,
     title:"Data Privacy Policies",
-    description:"With our secure database management systems, your data is safe with us. We prioritize data over everthing else",
+    description:"With our secure database management systems, your data and business information are well protected. We prioritize data privacy over everything else",
     icon:ShieldOff
+  },
+]
+
+
+interface chooseUsProps {
+  id: number;
+  title:string;
+  description:string;
+  icon: React.ComponentType<{ className?: string }>
+}
+
+const chooseUs : chooseUsProps[ ]  = [
+  {id:1,
+    title:"Streamlined Operations:",
+    description:"Our system automates key workflows, minimizing manual effort and  errors.",
+    icon:CircleCheckBig
+  },
+  {id:2,
+    title:"Cost Reduction:",
+    description:"We help you reduce carrying costs and avoid stockouts.",
+    icon:CircleCheckBig
+  },
+  {id:3,
+    title:"Improved Efficiency:",
+    description:"Our powerful analytics tools enable teams to work more efficiently in data-driven evironment.",
+    icon:CircleCheckBig
+  },
+  {id:4,
+    title:"Gain Control:",
+    description:"Forecast demand accurately and manage stock levels proactively with more ease than ever.",
+    icon:CircleCheckBig
   },
 ]
 
@@ -121,19 +152,20 @@ export default function Home () {
       </div>
 
       
-      {/* Features Section */}
+        {/* Features Section */}
         <div className="mx-auto py-16">
           <div className="mb-12 mt-12">
-            <h2 className="font font-semibold text-5xl text-center">Contributing Key Features</h2>
+            <h2 className="text-gray-800 font-semibold text-4xl text-center">Contributing Key Features</h2>
+            <p className="text-xl text-gray-700 font-semibold max-w-4xl mx-auto text-center mt-4">Discover the key features that make our inventory management system stand out, drive efficiency and make it perfect for your business needs</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-4 lg:gap-8 mx-auto">
               {features.map(({id, title, description, icon}) =>{
                 const Icon = icon;
                 return(
                   <div key={id} className="flex flex-col items-center bg-purple-100 border border-purple-300 rounded-lg shadow-lg p-6 m-3 hover:scale-105 transform transition-transform">
-                    <Icon className="w-12 h-12 mb-6"/>
-                    <h3 className="text-xl font-semibold text-center border-b-2 border-gray-400 mb-3 ">{title}</h3>
-                    <p>{description}</p>
+                    <Icon className="w-auto h-auto mb-6 text-green-400"/>
+                    <h3 className="text-xl font-semibold text-gray-800 text-center  mb-2 ">{title}</h3>
+                    <p className="text-base/6 text-gray-600 text-pretty border-t-2 border-gray-400 pt-2 text-center ">{description}</p>
 
                   </div>
                 )
@@ -141,6 +173,43 @@ export default function Home () {
             )}
           </div>
 
+        </div>
+
+        <div className="">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-16">
+            <div className="flex items-center">
+              <Image 
+                src ="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+                alt=""
+                width={1200}
+                height={800}
+                className="w-full object-cover  rounded-xl drop-shadow-lg"
+              />
+            </div>
+
+            <div className="text-center lg:text-left mx-auto">
+              <h2 className="text-4xl text-gray-800 text-center font-bold "> Why Choose Us?</h2>
+              <h3 className="text-xl text-gray-700 font-meduim mt-4 mb-4">We offer a comprehensive inventory management system that streamlines your operations, reduces costs, and improves overall efficiency.</h3>
+
+              <ul className="space-y-3 text-left font-medium mt-8 ">
+                {chooseUs.map(({id, title,description, icon}) =>{
+                  const Icon= icon;
+                  return(
+                    <li key={id} className="flex justify-items-start gap-2 text-gray-700"> 
+                      <Icon className="w-7 h-7 gap-4 space-x-3 text-green-500 mt-"/>
+                      <div className="flex-1 items-center justify-center">
+                        <strong className="w-full text-gray-800">{title}</strong> 
+                        <p className="w-full text-sm text-gray-600">{description}</p>
+                      </div>
+                      
+                    </li>
+                  )
+                })}
+              </ul>
+
+            </div>
+
+          </div>
         </div>
 
 
