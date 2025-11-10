@@ -106,7 +106,7 @@ export default function LearnMore () {
 
           </div>
 
-          <hr className ="border-t  border-gray-300 drop-shadow-lg/50 mt-24 my-4"></hr>
+          <hr className ="border-t  border-gray-300 drop-shadow-lg/50 mt-24 my-4 mx-auto"></hr>
 
         </div>
 
@@ -163,7 +163,7 @@ export default function LearnMore () {
           </div>
 
 
-            <hr className ="border-t  border-gray-300 drop-shadow-lg/50 mt-24 my-4"></hr>
+            <hr className ="border-t  border-gray-300 drop-shadow-lg/50 mt-24 my-4 mx-auto"></hr>
           
         </div>
 
@@ -211,7 +211,7 @@ export default function LearnMore () {
             </div>
           </div>
 
-          <hr className ="border-t  border-gray-300 drop-shadow-lg/50 mt-24"></hr>
+          <hr className ="border-t  border-gray-300 drop-shadow-lg/50 mt-24 mx-auto"></hr>
 
         </div>
 

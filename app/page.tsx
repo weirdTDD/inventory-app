@@ -1,4 +1,4 @@
-import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MonitorSmartphone, ShieldOff, TrendingUp } from "lucide-react";
+import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MonitorSmartphone, ShieldOff, Star, TrendingUp } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -77,6 +77,68 @@ const chooseUs : chooseUsProps[ ]  = [
   },
 ]
 
+  interface TestimonialsProps {
+    id: number;
+    name: string;
+    role:string;
+    company:string;
+    testimonial:string;
+    icon: React.ComponentType<{ className?: string }>
+    Image?: string | undefined;
+  }
+
+  const testimonials : TestimonialsProps[] = [
+    {id:1,
+      name:"Charlotte S.",
+      role:"Operations Manager",
+      company:"Consar Ltd, Accra-Ghana",
+      testimonial:"Eds Inventory Management is cost a effective solution to what would otherwise be a very expensive problem for us. It provides Consar Ghana with an essential ability to track stocks availability across multiple locations. ",
+      icon:Star,
+      Image:""
+    },
+        {id:2,
+      name:"Amanda A. Ofori",
+      role:"Project Coordinator",
+      company:"Bel Company Ltd, Tema-Ghana",
+      testimonial:"Eds Inventory Management Systems completely changed the way our store runs. We now track products in real time with zero stress. Our team saves hours every week because everything is finally organized and automated. ",
+      icon:Star,
+      Image:""
+    },
+        {id:3,
+      name:"Samuel Agyekum",
+      role:"Teritory Manager",
+      company:"Kasapreko Company Ltd, Accra-Ghana",
+      testimonial:"Eds Inventory Management system is lightning fast, easy to use, and accurate. Edward built a tool that even my least tech-savvy workers feel confident using. It has improved our daily operations more than any software we tried before.",
+      icon:Star,
+      Image:""
+    },
+        {id:4,
+      name:"Nana Ama Agyei",
+      role:"Small Business Owner",
+      company:"Consar Ltd, Accra-Ghana",
+      testimonial:"I was looking for something simple but powerful and Eds Inventory System delivered exactly that. It handles product tracking, updates, and reporting effortlessly. This system is a lifesaver.",
+      icon:Star,
+      Image:""
+    },
+        {id:5,
+      name:"Irene Addison",
+      role:"Business Consultant",
+      company:"Consar Ltd, Accra-Ghana",
+      testimonial:"I recommend Eds Inventory Management Systems to all my clients. It brings structure, transparency, and efficiency to any business dealing with products. This is professional-grade software with simplicity.",
+      icon:Star,
+      Image:"" 
+    },
+        {id:6,
+      name:"Richmond K.",
+      role:"E-Commerce Business Owner",
+      company:"Soraid Ltd, Kumasi-Ghana",
+      testimonial:"Before Eds Inventory System, stockouts and over-ordering were constant problems. Now I get alerts, clear dashboards, and full control at any time. My business runs smoother and more profitably.",
+      icon:Star,
+      Image:""
+    },
+
+  ]
+
 
 export default function Home () {
   return (
@@ -125,6 +187,7 @@ export default function Home () {
                 width={1200}
                 height={800}
                 className="w-full object-cover"
+                loading="lazy"
               />
             </div>
             
@@ -175,6 +238,7 @@ export default function Home () {
 
         </div>
 
+        {/*Why Choose Us Section*/}
         <div className="">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-16">
             <div className="flex items-center">
@@ -189,7 +253,7 @@ export default function Home () {
 
             <div className="text-center lg:text-left mx-auto">
               <h2 className="text-4xl text-gray-800 text-center font-bold "> Why Choose Us?</h2>
-              <h3 className="text-xl text-gray-700 font-meduim mt-4 mb-4">We offer a comprehensive inventory management system that streamlines your operations, reduces costs, and improves overall efficiency.</h3>
+              <h3 className="text-xl text-gray-700 font-semibold mt-4 mb-4">We offer a comprehensive inventory management system that streamlines your operations, reduces costs, and improves overall efficiency.</h3>
 
               <ul className="space-y-3 text-left font-medium mt-8 ">
                 {chooseUs.map(({id, title,description, icon}) =>{
@@ -209,6 +273,56 @@ export default function Home () {
 
             </div>
 
+
+
+          </div>  
+                    <hr className="border-t border-gray-300 drop-shadow-lg/50 mx-auto"/>
+        </div>
+
+        {/*Testimonials Section*/}
+        <div className="mx-auto py-16">
+          <div className="mb-12 mt-12">
+            <h2 className="text-4xl font-bold text-center  text-gray-800">What Our <span className="text-purple-700">Clients Say</span></h2>
+            <p className="text-gray-600 text-lg font-semibold text-center mt-6 max-w-2xl mx-auto">
+              Hear from some of the world&apos;s most inspirational organisations already using <span className="text-purple-700">Ed&apos;s</span> Inventory Management to track and manage their assets.
+            </p>
+          </div>
+          <div>
+
+          </div>
+
+          <div >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+              {testimonials.map(({id, name, role, company, testimonial, icon, Image:UserImage}) =>{
+                const Icon = icon;
+                return(
+                  <div key={id} className="flex flex-col bg-purple-50 border border-purple-200 hover:scale-105 transform transition-transform rounded-lg shadow-lg space-y-1 px-6 py-2">
+                    <div className="p-6 flex flex-row items-start">
+                      <Image
+                        src="/img-user.png"
+                        alt=""
+                        width="30" height="30"
+                        className= "w-16 h-16 rounded-full object-fill "
+                      />
+                      <div className="flex flex-col items-start">
+                         <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
+                        <div className="flex-1 items-start gap-2 text-left font-normal text-sm text-gray-500">
+                          <p className="">{role}</p> 
+                          <p>{company}</p>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <p className="text-gray-600 text-base/6">{testimonial}</p>
+                    
+                    <Icon className="text-amber-300 object-cover"/>
+
+                  </div>
+                )
+              })}
+
+            </div>
           </div>
         </div>
 
