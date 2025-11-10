@@ -297,15 +297,17 @@ export default function Home () {
                 const Icon = icon;
                 return(
                   <div key={id} className="flex flex-col bg-purple-50 border border-purple-200 hover:scale-105 transform transition-transform rounded-lg shadow-lg space-y-1 px-6 py-2">
-                    <div className="p-6 flex flex-row items-start">
+                    <div className="py-4 flex flex-row items-start mr-8">
                       <Image
-                        src="/img-user.png"
+                        src="/img-06.jpg"
                         alt=""
-                        width="30" height="30"
-                        className= "w-16 h-16 rounded-full object-fill "
+                        width="25" height="25"
+                        className= "w-12 h-12 rounded-full object-fill"
                       />
-                      <div className="flex flex-col items-start">
-                         <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
+                      <div className="px-2  flex flex-col items-start ">
+                        <h3 className="text-gray-800">
+                          <strong>{name}</strong>
+                        </h3>
                         <div className="flex-1 items-start gap-2 text-left font-normal text-sm text-gray-500">
                           <p className="">{role}</p> 
                           <p>{company}</p>
@@ -314,7 +316,7 @@ export default function Home () {
                       
                     </div>
 
-                    <p className="text-gray-600 text-base/6">{testimonial}</p>
+                    <p className="text-gray-600 text-base/6 font-semibold text-wrap">{testimonial}</p>
                     
                     <Icon className="text-amber-300 object-cover"/>
 
