@@ -321,9 +321,9 @@ export default function Home () {
                     
                     <div className="flex">
                       {[...Array(5)].map((_, i) =>(
-                        <StarIcon key={i}  className=" border-0 fill-amber-400"/>
+                        <StarIcon />
                       ))}
-                    </div> 
+                    </div>
 
                   </div>
                 )
