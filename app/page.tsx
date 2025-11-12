@@ -1,6 +1,7 @@
-import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MonitorSmartphone, ShieldOff, Star, TrendingUp } from "lucide-react";
+import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MonitorSmartphone, ShieldOff, Star, StarIcon, TrendingUp } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
+import { isContext } from "node:vm";
 
 interface HeaderProps {
   id: number;
@@ -83,7 +84,7 @@ const chooseUs : chooseUsProps[ ]  = [
     role:string;
     company:string;
     testimonial:string;
-    icon: React.ComponentType<{ className?: string }>
+    rating:number;
     Image?: string | undefined;
   }
 
@@ -93,7 +94,7 @@ const chooseUs : chooseUsProps[ ]  = [
       role:"Operations Manager",
       company:"Consar Ltd, Accra-Ghana",
       testimonial:"Eds Inventory Management is cost a effective solution to what would otherwise be a very expensive problem for us. It provides Consar Ghana with an essential ability to track stocks availability across multiple locations. ",
-      icon:Star,
+      rating:4,
       Image:""
     },
         {id:2,
@@ -101,7 +102,7 @@ const chooseUs : chooseUsProps[ ]  = [
       role:"Project Coordinator",
       company:"Bel Company Ltd, Tema-Ghana",
       testimonial:"Eds Inventory Management Systems completely changed the way our store runs. We now track products in real time with zero stress. Our team saves hours every week because everything is finally organized and automated. ",
-      icon:Star,
+     rating:5,
       Image:""
     },
         {id:3,
@@ -109,7 +110,7 @@ const chooseUs : chooseUsProps[ ]  = [
       role:"Teritory Manager",
       company:"Kasapreko Company Ltd, Accra-Ghana",
       testimonial:"Eds Inventory Management system is lightning fast, easy to use, and accurate. Edward built a tool that even my least tech-savvy workers feel confident using. It has improved our daily operations more than any software we tried before.",
-      icon:Star,
+       rating:5,
       Image:""
     },
         {id:4,
@@ -117,7 +118,7 @@ const chooseUs : chooseUsProps[ ]  = [
       role:"Small Business Owner",
       company:"Consar Ltd, Accra-Ghana",
       testimonial:"I was looking for something simple but powerful and Eds Inventory System delivered exactly that. It handles product tracking, updates, and reporting effortlessly. This system is a lifesaver.",
-      icon:Star,
+      rating:4,
       Image:""
     },
         {id:5,
@@ -125,7 +126,7 @@ const chooseUs : chooseUsProps[ ]  = [
       role:"Business Consultant",
       company:"Consar Ltd, Accra-Ghana",
       testimonial:"I recommend Eds Inventory Management Systems to all my clients. It brings structure, transparency, and efficiency to any business dealing with products. This is professional-grade software with simplicity.",
-      icon:Star,
+      rating:3,
       Image:"" 
     },
         {id:6,
@@ -133,7 +134,7 @@ const chooseUs : chooseUsProps[ ]  = [
       role:"E-Commerce Business Owner",
       company:"Soraid Ltd, Kumasi-Ghana",
       testimonial:"Before Eds Inventory System, stockouts and over-ordering were constant problems. Now I get alerts, clear dashboards, and full control at any time. My business runs smoother and more profitably.",
-      icon:Star,
+      rating:5,
       Image:""
     },
 
@@ -293,8 +294,8 @@ export default function Home () {
 
           <div >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
-              {testimonials.map(({id, name, role, company, testimonial, icon, Image:UserImage}) =>{
-                const Icon = icon;
+              {testimonials.map(({id, name, role, company, testimonial,}) =>{
+                const Icon= isContext
                 return(
                   <div key={id} className="flex flex-col bg-purple-50 border border-purple-200 hover:scale-105 transform transition-transform rounded-lg shadow-lg space-y-1 px-6 py-2">
                     <div className="py-4 flex flex-row items-start mr-8">
@@ -318,7 +319,11 @@ export default function Home () {
 
                     <p className="text-gray-600 text-base/6 font-semibold text-wrap">{testimonial}</p>
                     
-                    <Icon className="text-amber-300 object-cover"/>
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) =>(
+                        <StarIcon />
+                      ))}
+                    </div>
 
                   </div>
                 )
