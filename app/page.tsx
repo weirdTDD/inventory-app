@@ -321,7 +321,7 @@ export default function Home () {
                     
                     <div className="flex">
                       {[...Array(5)].map((_, i) =>(
-                        <StarIcon />
+                        <StarIcon key={i} />
                       ))}
                     </div>
 
@@ -340,4 +340,3 @@ export default function Home () {
     </div>
   )
 }
-
