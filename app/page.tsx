@@ -1,4 +1,4 @@
-import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MonitorSmartphone, ShieldOff, Star, StarIcon, TrendingUp } from "lucide-react";
+import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MessageSquarePlusIcon, MonitorSmartphone, ShieldOff, Star, StarIcon, TrendingUp } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
 import { isContext } from "node:vm";
@@ -288,19 +288,61 @@ export default function Home () {
               Hear from some of the world&apos;s most inspirational organisations already using <span className="text-purple-700">Ed&apos;s</span> Inventory Management to track and manage their assets.
             </p>
           </div>
-          <div>
+
+
+          <div className="flex items-center justify-center gap-12 mt-10 mb-26 ">
+            <div className="flex flex-row gap-8 items-center">
+              <MessageSquarePlusIcon
+                className="text-amber-700 fill-amber-600 mb-2"
+               width={40} height={40}
+               />
+
+              <div className="flex flex-col items-start mb-3 ">
+                <div className="">
+                  <h2 className=" text-base text-gray-500">4.8 of 5</h2>
+                </div>
+                <div className="flex">
+                  {[...Array(5)].map((_, i) =>(
+                    <StarIcon key={i} className="text-amber-400 fill-amber-400"/>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-8 items-center">
+              <Image
+                src="/google-play-store.svg"
+                alt=""
+                width={40} height={40}
+                className=""
+              />
+
+              <div className="flex flex-col items-start mb-3 ">
+                <div className="">
+                  <h2 className=" text-base text-gray-500">4.8 of 5</h2>
+                </div>
+
+                <div className="flex">
+                  {[...Array(5)].map((_, i) =>(
+                    <StarIcon key={i} className="text-amber-400 fill-amber-400"/>
+                  ))}
+                </div>
+              </div>
+          </div>
 
           </div>
+          
+
 
           <div >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
               {testimonials.map(({id, name, role, company, testimonial,}) =>{
-                const Icon= isContext
+                
                 return(
                   <div key={id} className="flex flex-col bg-purple-50 border border-purple-200 hover:scale-105 transform transition-transform rounded-lg shadow-lg space-y-1 px-6 py-2">
                     <div className="py-4 flex flex-row items-start mr-8">
                       <Image
-                        src="/img-06.jpg"
+                        src="/users.png"
                         alt=""
                         width="25" height="25"
                         className= "w-12 h-12 rounded-full object-fill"
@@ -310,20 +352,15 @@ export default function Home () {
                           <strong>{name}</strong>
                         </h3>
                         <div className="flex-1 items-start gap-2 text-left font-normal text-sm text-gray-500">
-                          <p className="">{role}</p> 
-                          <p>{company}</p>
+                          <p className="text-sm">{role}</p> 
+                          <p className="text-xs">{company}</p>
                         </div>
                       </div>
                       
                     </div>
 
                     <p className="text-gray-600 text-base/6 font-semibold text-wrap">{testimonial}</p>
-                    
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) =>(
-                        <StarIcon />
-                      ))}
-                    </div>
+                  
 
                   </div>
                 )
