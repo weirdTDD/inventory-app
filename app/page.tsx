@@ -289,17 +289,17 @@ export default function Home () {
             </p>
           </div>
 
-
-          <div className="flex items-center justify-center gap-12 mt-10 mb-26 ">
+          {/*rating Stars*/}
+          <div className=" grid  md:grid-cols-2 items-center justify-center gap-10 mt-10 mb-26 max-w-2xl mx-auto">
             <div className="flex flex-row gap-8 items-center">
               <MessageSquarePlusIcon
                 className="text-amber-700 fill-amber-600 mb-2"
-               width={40} height={40}
+               width={30} height={30}
                />
 
               <div className="flex flex-col items-start mb-3 ">
                 <div className="">
-                  <h2 className=" text-base text-gray-500">4.8 of 5</h2>
+                  <h2 className=" text-base text-gray-500 ml-1">4.8 of 5</h2>
                 </div>
                 <div className="flex">
                   {[...Array(5)].map((_, i) =>(
@@ -313,13 +313,13 @@ export default function Home () {
               <Image
                 src="/google-play-store.svg"
                 alt=""
-                width={40} height={40}
+                width={30} height={30}
                 className=""
               />
 
               <div className="flex flex-col items-start mb-3 ">
                 <div className="">
-                  <h2 className=" text-base text-gray-500">4.8 of 5</h2>
+                  <h2 className=" text-base text-gray-500 ml-1">4.8 of 5</h2>
                 </div>
 
                 <div className="flex">
@@ -328,7 +328,7 @@ export default function Home () {
                   ))}
                 </div>
               </div>
-          </div>
+            </div>
 
           </div>
           
@@ -369,6 +369,9 @@ export default function Home () {
             </div>
           </div>
         </div>
+
+
+        {/**/}
 
 
 
