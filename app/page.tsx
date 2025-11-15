@@ -391,8 +391,19 @@ export default function Home () {
               <div className="text-left space-y-4 text-gray-200 text-sm px-2">
                 <h3 className="font-semibold">Start your 14-day free trial here</h3>
                 <h3 ><span className="font-semibold">Contact us:</span> team@eds007.com | +233 50 775 8740</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="grid grid-cols-1 ">
                   <h3 className="font-semibold">Download the app:</h3>
+                  <div className="bg-black border-2 border-amber-50">
+
+                    <Image
+                    src="/users.png"
+                      alt=""
+                      width="25" height="25"
+                      className= "w-12 h-12 rounded-full object-fill"
+                    />
+                    <p>GET IT ON <br/>Google Play </p>
+                    
+                  </div>
 
                 </div>
 
