@@ -280,7 +280,7 @@ export default function Home () {
         </div>
 
         {/*Testimonials Section*/}
-        <div className="mx-auto py-16">
+        <div className="mx-auto py-16 mb-8">
           <div className="mb-12 mt-12">
             <h2 className="text-4xl font-bold text-center  text-gray-800">What Our <span className="text-purple-700">Clients Say</span></h2>
             <p className="text-gray-600 text-lg font-semibold text-center mt-6 max-w-2xl mx-auto">
@@ -351,14 +351,14 @@ export default function Home () {
                           <strong>{name}</strong>
                         </h3>
                         <div className="flex-1 items-start gap-2 text-left font-normal text-sm text-gray-500">
-                          <p className="text-sm">{role}</p> 
-                          <p className="text-xs">{company}</p>
+                          <p className="text-sm font-medium">{role}</p> 
+                          <p className="text-xs font-light">{company}</p>
                         </div>
                       </div>
                       
                     </div>
 
-                    <p className="text-gray-600 text-base/6 font-semibold text-wrap">{testimonial}</p>
+                    <p className="text-gray-600 text-sm/6 font-medium text-wrap">{testimonial}</p>
                   
 
                   </div>
@@ -367,24 +367,28 @@ export default function Home () {
 
             </div>
           </div>
-        </div>
+          
+
+        </div> 
+
+         <hr className="border-t border-gray-300 drop-shadow-lg/50 mx-auto py-16"/>
 
 
         {/*Ready*/}
         <div className="mx-auto py-12">
-          <div className="grid md:grid-cols-2 items-center gap-8 mx-auto">
-            <div className="bg-purple-700 text-center md:text-left py-12 mb-10 pl-6 rounded-lg md:rounded-xl space-y-26">
+          <div className="grid lg:grid-cols-2 items-center gap-8 min-h-4/6 mx-auto">
+            <div className="bg-purple-700 pl-5 text-left py-12 mb-10  rounded-lg md:rounded-xl space-y-26">
               <div className=" text-white space-y-16">
                 <div>
                  <h2 className="text-4xl font-black">Ready to Go?</h2> 
                 </div>
 
-                <div>
-                  <hr className="border-t border-gray-200 drop-shadow-lg/50 px-0 mx-auto  mr-80"/>
+                <div className="px-0 mx-auto  mr-80">
+                  <hr className="border-t-3 border-indigo-300 drop-shadow-lg/50 rounded-lg"/>
                 </div>
               </div>
 
-              <div className="text-left space-y-4 text-gray-200 text-sm">
+              <div className="text-left space-y-4 text-gray-200 text-sm px-2">
                 <h3 className="font-semibold">Start your 14-day free trial here</h3>
                 <h3 ><span className="font-semibold">Contact us:</span> team@eds007.com | +233 50 775 8740</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2">
@@ -406,6 +410,8 @@ export default function Home () {
             </div>
 
           </div>
+
+          <hr className="border-t border-gray-300 drop-shadow-lg/50 mx-auto"/>
         </div>
 
 
