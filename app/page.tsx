@@ -383,7 +383,7 @@ export default function Home () {
                  <h2 className="text-4xl font-black">Ready to Go?</h2> 
                 </div>
 
-                <div className="px-0 mx-auto  mr-80">
+                <div className="px-0 mx-2  mr-80">
                   <hr className="border-t-3 border-indigo-300 drop-shadow-lg/50 rounded-lg"/>
                 </div>
               </div>
@@ -391,18 +391,24 @@ export default function Home () {
               <div className="text-left space-y-4 text-gray-200 text-sm px-2">
                 <h3 className="font-semibold">Start your 14-day free trial here</h3>
                 <h3 ><span className="font-semibold">Contact us:</span> team@eds007.com | +233 50 775 8740</h3>
-                <div className="grid grid-cols-1 ">
-                  <h3 className="font-semibold">Download the app:</h3>
-                  <div className="bg-black border-2 border-amber-50">
+                <div className="flex items-center gap-6">
+                  <h3 className="font-semibold ">Download the app:</h3>
+                  <div className="bg-black border-3 border-amber-50 rounded-lg flex items-center max-w-42 px-3 space-x-2 hover:scale-75 transform transition-transform">
 
-                    <Image
-                    src="/users.png"
-                      alt=""
-                      width="25" height="25"
-                      className= "w-12 h-12 rounded-full object-fill"
-                    />
-                    <p>GET IT ON <br/>Google Play </p>
-                    
+                    <Link
+                       href="https://google-play.com"
+                       className="flex flex-row-1 items-center gap-2"
+                      >
+                      <Image
+                        src="/google-play-store.svg"
+                        alt="google play"
+                        width="10" height="10"
+                        className= "w-6 h-7 object-fill"
+                      />
+
+                      <p className="text-[9px] font-bold py-1">GET IT ON <br/><span className="text-[16px] font-normal">Google Play</span> </p>
+                    </Link>
+                                        
                   </div>
 
                 </div>
@@ -416,7 +422,7 @@ export default function Home () {
                 src="https://images.unsplash.com/photo-1703087423334-c041fac8e610?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
                 width={1200} height={1000}
-                className="w-full object-cover min-h-100 rounded-xl"
+                className="w-full object-cover min-h-107 rounded-xl"
               />
             </div>
 
@@ -424,6 +430,29 @@ export default function Home () {
 
           <hr className="border-t border-gray-300 drop-shadow-lg/50 mx-auto"/>
         </div>
+        <div className="mx-auto py-12">
+          <div className="mb-10 mt-10">
+            <div>
+              <div className="mb-10 ">
+                <Image
+                  src="/logox.png"
+                  alt=""
+                  width={800} height={500}
+                  className="w-45 h-15 object-fit "
+                />
+
+                <div className="mt-16">
+                  <h2 className="text-5xl font-black text-indigo-800">
+                    We can&apos;t wait to see<br/> what we achieve<br/> <span className="text-purple-700" >together</span><span className="text-indigo-700  rounded-full">.</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
 
 
 
