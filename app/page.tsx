@@ -1,7 +1,6 @@
-import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MessageSquarePlusIcon, MonitorSmartphone, ShieldOff, Star, StarIcon, TrendingUp } from "lucide-react";
+import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MessageSquarePlusIcon, MonitorSmartphone, ShieldOff, StarIcon, TrendingUp } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
-import { isContext } from "node:vm";
 
 interface HeaderProps {
   id: number;
@@ -314,7 +313,7 @@ export default function Home () {
                 src="/google-play-store.svg"
                 alt=""
                 width={30} height={30}
-                className=""
+                className="rouunded-full"
               />
 
               <div className="flex flex-col items-start mb-3 ">
@@ -371,7 +370,43 @@ export default function Home () {
         </div>
 
 
-        {/**/}
+        {/*Ready*/}
+        <div className="mx-auto py-12">
+          <div className="grid md:grid-cols-2 items-center gap-8 mx-auto">
+            <div className="bg-purple-700 text-center md:text-left py-12 mb-10 pl-6 rounded-lg md:rounded-xl space-y-26">
+              <div className=" text-white space-y-16">
+                <div>
+                 <h2 className="text-4xl font-black">Ready to Go?</h2> 
+                </div>
+
+                <div>
+                  <hr className="border-t border-gray-200 drop-shadow-lg/50 px-0 mx-auto  mr-80"/>
+                </div>
+              </div>
+
+              <div className="text-left space-y-4 text-gray-200 text-sm">
+                <h3 className="font-semibold">Start your 14-day free trial here</h3>
+                <h3 ><span className="font-semibold">Contact us:</span> team@eds007.com | +233 50 775 8740</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                  <h3 className="font-semibold">Download the app:</h3>
+
+                </div>
+
+              </div>
+             
+            </div>
+
+           <div className="mb-10 ">
+              <Image
+                src="https://images.unsplash.com/photo-1703087423334-c041fac8e610?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+                width={1200} height={1000}
+                className="w-full object-cover min-h-100 rounded-xl"
+              />
+            </div>
+
+          </div>
+        </div>
 
 
 
