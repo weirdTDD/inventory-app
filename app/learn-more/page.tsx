@@ -29,7 +29,7 @@ export default function LearnMore () {
               loading='lazy'
             />
           </div>
-          <div className='absolute sm:hidden flex flex-col ml-2 min-w-full'>
+          <div className='absolute sm:hidden flex flex-col ml-2 min-w-full pointer-events-none'>
             <Image
               src="/logox.png"
               alt="logo"
@@ -42,8 +42,9 @@ export default function LearnMore () {
               <h1 className=' text-xl font-semibold bg-gradient-to-r from-fuchsia-500 via-fuchsia-800 to-indigo-700 bg-clip-text mt-10 text-transparent'>Learn More about us</h1>
 
               <Link 
-                href="/"
+                href="/sign-in"
                 className= " mt-10 bg-purple-600 text-base text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl transition-colors "
+               
                 >
                 Sign In
               </Link>
