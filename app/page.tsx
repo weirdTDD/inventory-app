@@ -1,6 +1,7 @@
 import { ArrowUpNarrowWide, BarChart3, ChartCandlestick, ChartLine, CircleCheckBig, MessageSquarePlusIcon, MonitorSmartphone, ShieldOff, StarIcon, TrendingUp } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
+import Navbar from "../components/navbar";
 
 interface HeaderProps {
   id: number;
@@ -143,6 +144,7 @@ const chooseUs : chooseUsProps[ ]  = [
 export default function Home () {
   return (
     <div className='min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center'>
+      <div className="w-full" > <Navbar/>
       <div className="max-w-7xl mx-auto px-4 ">
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -455,6 +457,8 @@ export default function Home () {
 
 
 
+
+      </div>
 
       </div>
       
