@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-const footer = () => {
+export default function Footer () {
 
     const currentYear = new Date().getFullYear();
 
@@ -23,9 +23,10 @@ const footer = () => {
         </Link>
         <span>|</span>
 
+        <p>Copyright {currentYear}, EdsInventory Management. All Rights Reserved.</p>
+
       </div>
     </div>
   )
 }
 
-export default footer
