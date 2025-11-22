@@ -143,7 +143,7 @@ const chooseUs : chooseUsProps[ ]  = [
 
 
 export default function Home () {
-  return (
+  return ( <>
     <div className='min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center'>
       <div className="w-full mb-10" > <Navbar/>
       <div className="max-w-7xl mx-auto px-4 ">
@@ -460,12 +460,15 @@ export default function Home () {
 
 
       </div>
+
+      </div>
+     
+      
+    </div> 
       <div>
         <Footer/>
       </div>
-      </div>
-      
-      
-    </div>
+
+   </>   
   )
 }
