@@ -6,25 +6,62 @@ export default function Footer () {
     const currentYear = new Date().getFullYear();
 
   return (
-    <div>
-      <div className='text-center py-4'>
-        <Link   href="">
-            Privacy
-        </Link>
-        <span>|</span>
+    <div className='bg-purple-900 text-white'>
+      <div className='text-center py-4 '>
+        <div className='max-w-7xl mx-[10%]'>
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-around  mx-6 lg:mx-auto my-6 px-6">
+            <div className='grid grid-cols-1 text-left py-6'>
 
-        <Link   href="">
-            Terms
-        </Link>
-        <span>|</span>
+                <ul>
+                    <li>Eds Inventory Management HQ</li>
+                    <li>Planners Avenue | Okpoi-Gonno</li>
+                    <li>Spintex-Road, Accra</li>
+                </ul>
+            </div>
 
-        <Link   href="">
-            Contact
-        </Link>
-        <span>|</span>
+            <div className='grid grid-cols-1 text-left  py-6'>
+                <ul>
+                    <li>Eds Inventory Management HQ</li>
+                    <li>Planners Avenue | Okpoi-Gonno</li>
+                    <li>Spintex-Road, Accra</li>
+                </ul>
+            </div>
+
+            <div className='grid grid-cols-1 text-left  py-6'>
+                <ul>
+                    <li>Eds Inventory Management HQ</li>
+                    <li>Planners Avenue | Okpoi-Gonno</li>
+                    <li>Spintex-Road, Accra</li>
+                </ul>
+            </div>
+
+        </div>
+        <div className= "grid grid-cols-3 items-center max-w-xl mx-auto py-8">
+            <div className='space-x-8'>
+                <Link className=''  href="">
+                    Privacy
+                </Link>
+                <span>|</span> 
+            </div>
+
+            <div className='space-x-8'>
+                <Link className=''  href="">
+                    Terms
+                </Link>
+                <span>|</span> 
+            </div>
+
+            <div className='space-x-8'>
+                <Link className=''  href="">
+                    Contact
+                </Link>
+                <span>|</span> 
+            </div>
+        </div>
 
         <p>Copyright {currentYear}, EdsInventory Management. All Rights Reserved.</p>
 
+      </div>
       </div>
     </div>
   )
