@@ -437,12 +437,13 @@ export default function Home () {
           <div className="mb-10 mt-10">
             <div>
               <div className="mb-10 ">
-                <Image
+               {/* <Image
                   src="/logox.png"
                   alt=""
                   width={800} height={500}
                   className="w-45 h-15 object-fit "
                 />
+               */}
 
                 <div className="mt-16">
                   <h2 className="text-5xl font-black text-indigo-800">
