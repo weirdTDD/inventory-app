@@ -8,8 +8,8 @@ export default function Footer () {
   return (
     <div className='bg-purple-900 text-white'>
       <div className='text-center py-4 '>
-        <div className='max-w-7xl mx-[10%]'>
-        <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-around  mx-6 lg:mx-auto my-6 px-6">
+        <div className='max-w-7xl mx-auto'>
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-around  mx-6 lg:mx-auto my-6 px-6  border-2 border-b-amber-500">
             <div className='grid grid-cols-1 text-left py-6'>
 
                 <ul>
