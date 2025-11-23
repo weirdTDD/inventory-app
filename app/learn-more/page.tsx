@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image"
 import Link from 'next/link'
+import Footer from '../../components/footer'
 
 export default function LearnMore () {
   return (
@@ -41,8 +42,7 @@ export default function LearnMore () {
             <div className=' flex items-center justify-between gap-6 mx-4'>
               <h1 className=' text-xl font-semibold bg-gradient-to-r from-fuchsia-500 via-fuchsia-800 to-indigo-700 bg-clip-text mt-10 text-transparent'>Learn More about us</h1>
 
-              <Link 
-                href="/sign-in"
+              <Link href="/learn-more"
                 className= " mt-10 bg-purple-600 text-base text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl transition-colors "
                
                 >
@@ -102,7 +102,7 @@ export default function LearnMore () {
 
             <div className=' min-w-xs'>
               <h3 className='mt-6 font-semibold text-gray-800 border-b-2 border-gray-400 p-3'>24/7 availability support</h3>
-              <p className='text-base text-gray-500 mt-4'>Our platform provides round-the-clock support to ensure smooth operations and fast record tracking and retrieval.</p>
+              <p className='text-base text-gray-500 mt-4'>Our platform provides round-the-clock support to ensure smooth operations and fast record tracking and data retrieval.</p>
             </div>
 
           </div>
@@ -241,6 +241,9 @@ export default function LearnMore () {
 
 
       </div>{/*windowed*/}
+      <div>
+        <Footer/>
+      </div>
 
     </div>
   )
