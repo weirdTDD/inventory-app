@@ -5,11 +5,11 @@ import Footer from '../../components/footer'
 
 export default function LearnMore () {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-200 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-purple-50">
 
-      <div className="relative bg-gray-300 xs:hidden">
+      <div className="relative bg-gray-200 xs:hidden">
         <div className="absolute inset-0">
-          <div className="w-full h-full object-cover opacity-30 bg-gradient-to-l from-purple-600 via-indigo-300 to-purple-800">
+          <div className="w-full h-full object-cover opacity-30 bg-gradient-to-l from-purple-600 via-indigo-300 to-purple-800 drop-shadow-lg">
 
           </div>
           {/*  <Image
@@ -30,24 +30,28 @@ export default function LearnMore () {
               loading='lazy'
             />
           </div>
-          <div className='absolute sm:hidden flex flex-col ml-2 min-w-full pointer-events-none'>
+          <div className='absolute sm:hidden flex flex-col ml-2 min-w-full'>
             <Image
               src="/logox.png"
               alt="logo"
-              className='w-42 h-18 m-4'
-              width={150}
-              height={30}
+              className='w-36 h-16 m-4'
+              width={800}
+              height={400}
               loading='lazy'
             />
-            <div className=' flex items-center justify-between gap-6 mx-4'>
-              <h1 className=' text-xl font-semibold bg-gradient-to-r from-fuchsia-500 via-fuchsia-800 to-indigo-700 bg-clip-text mt-10 text-transparent'>Learn More about us</h1>
+            <div className=' flex items-center justify-between gap-6 mx-4 mt-10'>
+              <h1 className=' text-xl font-semibold bg-gradient-to-r from-fuchsia-500 via-fuchsia-800 to-indigo-700 bg-clip-text text-transparent '>Learn More about us</h1>
 
-              <Link href="/learn-more"
-                className= " mt-10 bg-purple-600 text-base text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl transition-colors "
-               
-                >
-                Sign In
-              </Link>
+              <div>
+                <Link href="/learn-more"
+                  className= "  bg-purple-600 text-base text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl transition-colors  "
+                
+                  >
+                  Sign In
+                </Link>
+              </div>
+
+                
             </div>
           </div>
         
