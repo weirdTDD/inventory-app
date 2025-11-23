@@ -43,9 +43,9 @@ export default function LearnMore () {
               <h1 className=' text-xl font-semibold bg-gradient-to-r from-fuchsia-500 via-fuchsia-800 to-indigo-700 bg-clip-text text-transparent '>Learn More about us</h1>
 
               <div>
-                <Link href="/learn-more"
-                  className= "  bg-purple-600 text-base text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl transition-colors  "
-                
+                <Link 
+                  href="/sign-in"
+                  className= "  bg-purple-600 text-base text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl transition-colors "
                   >
                   Sign In
                 </Link>
