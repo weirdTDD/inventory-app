@@ -45,7 +45,7 @@ export default function LearnMore () {
               <div>
                 <Link 
                   href="/sign-in"
-                  className= "  bg-purple-600 text-base text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl transition-colors "
+                  className= "  bg-purple-600 text-base text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl z-50 relative transition-colors "
                   >
                   Sign In
                 </Link>
