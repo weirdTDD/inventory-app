@@ -80,7 +80,8 @@ export default function LearnMore () {
               alt="pic"
               width={1400} height={750}
               style={{ objectFit: "cover" }}
-              loading='lazy'
+
+              priority
             />
           </div>
 

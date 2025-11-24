@@ -4,10 +4,13 @@ import { prisma } from '../../lib/prisma'
 import { getCurrentUser } from '../../lib/auth'
 import { TrendingUp } from 'lucide-react'
 import ProductChart from '../../components/products-chart'
+import { redirect } from 'next/navigation'
 
 export default async function DashboardPage() {
     const user = await getCurrentUser();
     const userId = user.id
+
+    if (!user) redirect("/sign-in");
 
     {/* const [totalProducts, lowStock, allProducts] = await Promise.all([
         eg.prisma.product.count({ where: { userId } }),
@@ -97,7 +100,7 @@ export default async function DashboardPage() {
                                 Dashboard
                             </h1>
                             <p className="text-base lg:text-xl font-semibold text-gray-500">
-                                Welcome back! <span role="img" aria-label="party popper">🎉</span><br />
+                                Welcome back! {user.email} <span role="img" aria-label="party popper">🎉</span><br />
                                 <span className='text-xs lg:text-sm'>Here is an overview of your inventory.</span>
                             </p>
                         </div>
