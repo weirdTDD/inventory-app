@@ -14,7 +14,7 @@ export default function Footer () {
             <div className='grid grid-cols-1 text-left py-6 '>
                 <h2 className='font-semibold mb-2'>About Us</h2>
                 <p className='text-xs/6 text-nowrap'>Established in 2024 as a tool for tracking product <br/> purchases in an Limited Liability Company. <br/> EdsInventory Management in now well known for <br/> its business analytics in inventory management.</p>
-                <a href="/learn-more" className='text-gray-800'> learn more</a>
+                <a href="/learn-more" className='text-gray-500 underline underline-offset-4'> learn more</a>
 
             </div>
             <div className='grid grid-cols-1 text-left py-6 w-full lg:mx-12'>
