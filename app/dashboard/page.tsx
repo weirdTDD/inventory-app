@@ -100,7 +100,7 @@ export default async function DashboardPage() {
                                 Dashboard
                             </h1>
                             <p className="text-base lg:text-xl font-semibold text-gray-500">
-                                Welcome back! {user.email} <span role="img" aria-label="party popper">🎉</span><br />
+                                Welcome back! <span role="img" aria-label="party popper">🎉</span><br />
                                 <span className='text-xs lg:text-sm'>Here is an overview of your inventory.</span>
                             </p>
                         </div>
