@@ -244,7 +244,7 @@ export default function LearnMore () {
 
         </div>
         
-        <div className=''>
+        <div className='flex items-center justify-end mt-6'>
           <Link 
             href="/"
             className= " flex items-center w-34 bg-purple-600 text-base text-white px-2 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl z-50 relative transition-colors "
