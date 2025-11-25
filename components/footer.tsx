@@ -11,13 +11,13 @@ export default function Footer () {
         <div className=' mx-[5%]'>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-4 mx-6 lg:mx-auto my-6 px-6 text-xs ">
 
-            <div className='grid grid-cols-1 text-left py-6 '>
+            <div className='grid grid-cols-1 text-left py-4 '>
                 <h2 className='font-semibold mb-2'>About Us</h2>
                 <p className='text-xs/6 text-nowrap'>Established in 2024 as a tool for tracking product <br/> purchases in an Limited Liability Company. <br/> EdsInventory Management in now well known for <br/> its business analytics in inventory management.</p>
                 <a href="/learn-more" className='text-gray-500 underline underline-offset-4'> learn more</a>
 
             </div>
-            <div className='grid grid-cols-1 text-left py-6 w-full lg:mx-12'>
+            <div className='grid grid-cols-1 text-left py-3 w-full lg:mx-12'>
                 <h2 className='font-semibold mb-2'>Address</h2>
                 <ul>
                     <li>Eds Inventory Management HQ</li>
@@ -29,7 +29,7 @@ export default function Footer () {
                 </ul>
             </div>
 
-            <div className='grid grid-cols-1 text-left  py-6'>
+            <div className='grid grid-cols-1 text-left  py-3'>
                 <h2 className='font-semibold mb-2'>Call Us On</h2>
                 <ul>
                     <li>Accra:  +233 50 000 0000</li>
@@ -40,7 +40,7 @@ export default function Footer () {
                 </ul>
             </div>
 
-            <div className='grid grid-cols-1 text-left  py-6'>
+            <div className='grid grid-cols-1 text-left  py-3'>
                 <h2 className='font-semibold mb-2'>Email Us</h2>
                 <ul>
                     <li>info@edsinventory.com</li>
