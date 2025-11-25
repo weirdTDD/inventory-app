@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image"
 import Link from 'next/link'
 import Footer from '../../components/footer'
+import { ArrowLeft } from 'lucide-react'
 
 export default function LearnMore () {
   return (
@@ -242,7 +243,16 @@ export default function LearnMore () {
             </div>
 
         </div>
-
+        
+        <div className=''>
+          <Link 
+            href="/"
+            className= " flex items-center w-34 bg-purple-600 text-base text-white px-2 py-2 rounded-lg font-semibold hover:bg-purple-800 shadow-xl z-50 relative transition-colors "
+            >
+              <ArrowLeft /> 
+              Back Home
+          </Link>
+        </div>
 
 
       </div>{/*windowed*/}
